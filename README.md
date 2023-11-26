@@ -7,6 +7,12 @@ The project supports Dynamic colors for Android, and light and dark thems for al
 `
 The plans to complete the Desktop and Web features are underway. You can also take this as an opportunity to contribute by working on these features 🥳`
 
+## Platforms
+Android | IOS | Wear OS| Desktop | Web |
+:----: | :----: | :----: | :----: | :----:
+✅ | ✅ | ✅ | 
+
+
 
 ## Screenshots
 #### Android
@@ -31,9 +37,20 @@ The plans to complete the `Desktop` and `Web` features are underway. You can als
 ## Demo
 #### Android
 
+https://github.com/Felix-Kariuki/FreeToGame/assets/61313608/6a4400b3-1e19-4cf9-86cf-b3bda85fc011
+
+
 #### IOS
 
+
+https://github.com/Felix-Kariuki/FreeToGame/assets/61313608/78a60290-e0e7-4582-9be6-4d35fd34d0f5
+
+
 #### Wear OS
+
+
+https://github.com/Felix-Kariuki/FreeToGame/assets/61313608/9ab6ff77-55e8-4218-b40c-ed5a1a1bcc89
+
 
 #### Desktop && Web
 The plans to complete the `Desktop` and `Web` features are underway. You can also take this as an opportunity to contribute by working on these features 🥳
@@ -47,8 +64,7 @@ The plans to complete the `Desktop` and `Web` features are underway. You can als
 
 This is a Kotlin module that contains the logic common for both Android and iOS applications, that is, the code you share between platforms.
 
-This `shared` module is also where you’ll write your Compose Multiplatform code.
-In `shared/src/commonMain/kotlin/App.kt`, you can find the shared root `@Composable` function for your app.
+This `shared` module is also where all the  Compose Multiplatform code is witten.
 
 It uses Gradle as the build system. You can add dependencies and change settings in `shared/build.gradle.kts`.
 The `shared` module builds into an Android library and an iOS framework.
@@ -74,20 +90,27 @@ The `wear` module depends on and uses the `shared` module as a regular Android l
 
 
 ## License and Copyright ©️
-  
-  ```
-    Copyright 2023 Felix Kariuki
+[LICENSE](https://github.com/Felix-Kariuki/FreeToGame/blob/main/LICENSE)
 
-    Licensed under the Apache License, Version 2.0 (the "License");
-    you may not use this file except in compliance with the License.
-    You may obtain a copy of the License at
+  ```
+     Copyright©️ 2023 Felix Kariuki
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
 
        http://www.apache.org/licenses/LICENSE-2.0
 
-    Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,
-    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-    See the License for the specific language governing permissions and
-    limitations under the License.
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
   
   ```
+
+ ## Reach Out 
+
+  * [Twitter](https://twitter.com/felixkariuki_)
+
+  * [LinkedIn](https://www.linkedin.com/in/felix-kariuki/)
