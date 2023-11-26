@@ -55,6 +55,19 @@ https://github.com/Felix-Kariuki/FreeToGame/assets/61313608/9ab6ff77-55e8-4218-b
 #### Desktop && Web
 The plans to complete the `Desktop` and `Web` features are underway. You can also take this as an opportunity to contribute by working on these features 🥳
 
+## Tech Stack
+- [Kotlin Multiplatform](https://kotlinlang.org/docs/multiplatform.html) - The Kotlin Multiplatform technology is designed to simplify the development of cross-platform projects. It reduces time spent writing and maintaining the same code for different platforms while retaining the flexibility and benefits of native programming.
+- [Compose Multiplatform](https://www.jetbrains.com/lp/compose-multiplatform/) -  Declarative framework for sharing UIs across multiple platforms. Based on Kotlin and Jetpack Compose.
+
+- [Koin](https://insert-koin.io/) - A framework to help you build any kind of Kotlin & Kotlin Multiplatform application, from Android mobile, Multiplatform apps to backend Ktor server applications Koin is developed by Kotzilla and open-source contributors
+- [Voyager](https://voyager.adriel.cafe/) - A multiplatform navigation library built for, and seamlessly integrated with, Jetpack Compose.
+- [Kotlinx-serilization](https://github.com/Kotlin/kotlinx.serialization) - Kotlin multiplatform / multi-format serialization.
+- [ktor](https://ktor.io/docs/welcome.html) - Ktor is a framework to easily build connected applications – web applications, HTTP services, mobile and browser applications.
+- [Compose Components Resources](https://mvnrepository.com/artifact/org.jetbrains.compose.components/components-resources) - Resources For Compose Multiplatform.
+- [Kotlin](https://kotlinlang.org/docs/getting-started.html) - Kotlin is a modern but already mature programming language designed to make developers happier. It's concise, safe, interoperable with Java and other languages, and provides many ways to reuse code between multiple platforms for productive programming.
+
+
+
 
 ## Project structure
 
