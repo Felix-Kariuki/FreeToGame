@@ -1,14 +1,5 @@
 package com.flexcode.freetogame.presentation.views
 
-import androidx.compose.animation.AnimatedVisibility
-import androidx.compose.animation.expandVertically
-import androidx.compose.animation.fadeIn
-import androidx.compose.animation.fadeOut
-import androidx.compose.animation.scaleIn
-import androidx.compose.animation.scaleOut
-import androidx.compose.animation.shrinkVertically
-import androidx.compose.animation.slideInVertically
-import androidx.compose.animation.slideOutVertically
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -102,25 +93,25 @@ internal class GameDetailsView(
                 }, game = game)
 
 
-                AnimatedVisibility(!state.value.isLoading) {
-                    Column(
-                        Modifier.padding(horizontal = 16.dp)
-                    ) {
+                //AnimatedVisibility(!state.value.isLoading) {
+                Column(
+                    Modifier.padding(horizontal = 16.dp)
+                ) {
 
-                        Text(
-                            text = "About ${game.title}",
-                            fontSize = 17.sp,
-                            fontWeight = FontWeight.SemiBold,
-                            color = MaterialTheme.colorScheme.onSurface
-                        )
+                    Text(
+                        text = "About ${game.title}",
+                        fontSize = 17.sp,
+                        fontWeight = FontWeight.SemiBold,
+                        color = MaterialTheme.colorScheme.onSurface
+                    )
 
-                        Text(
-                            text = state.value.gameDetails?.description ?: "",
-                            fontSize = 15.sp,
-                            modifier = Modifier.padding(vertical = 16.dp),
-                            fontWeight = FontWeight.W300,
-                            color = MaterialTheme.colorScheme.onSurface
-                        )
+                    Text(
+                        text = state.value.gameDetails?.description ?: "",
+                        fontSize = 15.sp,
+                        modifier = Modifier.padding(vertical = 16.dp),
+                        fontWeight = FontWeight.W300,
+                        color = MaterialTheme.colorScheme.onSurface
+                    )
 
 //                    Text(
 //                        text = "Additional information", fontSize = 16.sp,
@@ -129,126 +120,126 @@ internal class GameDetailsView(
 //                    )
 
 
-                        Spacer(Modifier.height(24.dp))
+                    Spacer(Modifier.height(24.dp))
 
-                        Row(
-                            verticalAlignment = Alignment.CenterVertically,
-                            modifier = Modifier.fillMaxWidth(),
-                            horizontalArrangement = Arrangement.Center
-                        ) {
-                            Text(
-                                text = "${game.title} Screenshots", fontSize = 17.sp,
-                                fontWeight = FontWeight.SemiBold,
-                                color = MaterialTheme.colorScheme.onSurface,
-                            )
-                        }
-                        val screenshots = state.value.gameDetails?.screenshots ?: emptyList()
-                        val height = (76 * screenshots.size).dp
-                        Spacer(Modifier.height(16.dp))
-
-                        LazyVerticalGrid(
-                            columns = GridCells.Fixed(2),
-                            modifier = Modifier.height(height),
-                            horizontalArrangement = Arrangement.spacedBy(8.dp),
-                            verticalArrangement = Arrangement.spacedBy(8.dp)
-                        ) {
-                            items(screenshots.size) { i ->
-                                AsyncImage(
-                                    imageUrl = screenshots[i].image,
-                                    contentDescription = "Anime",
-                                    contentScale = ContentScale.Crop,
-                                    loadingPlaceHolder = {
-                                        ShimmerImagePlaceHolder(height = 110.dp)
-                                    },
-                                    modifier = Modifier.fillMaxWidth()
-                                        .height(110.dp),
-                                    errorPlaceHolder = {},
-                                    alignment = Alignment.Center,
-                                    alpha = DefaultAlpha,
-                                    coloFilter = null,
-                                    filterQuality = DrawScope.DefaultFilterQuality,
-                                )
-                            }
-                        }
-
-                        Spacer(Modifier.height(24.dp))
-
-                        Column(
-                            verticalArrangement = Arrangement.Center,
-                            modifier = Modifier.fillMaxWidth(),
-                            horizontalAlignment = Alignment.CenterHorizontally
-                        ) {
-                            Text(
-                                text = "Minimum system description", fontSize = 17.sp,
-                                fontWeight = FontWeight.SemiBold,
-                                color = MaterialTheme.colorScheme.onSurface,
-                            )
-                            Text(
-                                text = game.platform, fontSize = 16.sp,
-                                fontWeight = FontWeight.W200,
-                                color = MaterialTheme.colorScheme.onSurface,
-                                modifier = Modifier.padding(start = 8.dp)
-                            )
-                        }
-
-
-                        Spacer(Modifier.height(16.dp))
-
+                    Row(
+                        verticalAlignment = Alignment.CenterVertically,
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.Center
+                    ) {
                         Text(
-                            text = "OS", fontSize = 13.sp,
-                            fontWeight = FontWeight.W200,
-                            color = MaterialTheme.colorScheme.onSurface
-                        )
-                        Text(
-                            text = state.value.gameDetails?.minimumSystemRequirements?.os ?: "",
-                            fontSize = 14.sp,
-                            fontWeight = FontWeight.W300,
+                            text = "${game.title} Screenshots", fontSize = 17.sp,
+                            fontWeight = FontWeight.SemiBold,
                             color = MaterialTheme.colorScheme.onSurface,
-                            modifier = Modifier.padding(bottom = 16.dp)
-                        )
-
-                        Text(
-                            text = "Memory", fontSize = 13.sp,
-                            fontWeight = FontWeight.W200,
-                            color = MaterialTheme.colorScheme.onSurface
-                        )
-                        Text(
-                            text = state.value.gameDetails?.minimumSystemRequirements?.memory ?: "",
-                            fontSize = 14.sp,
-                            fontWeight = FontWeight.W300,
-                            color = MaterialTheme.colorScheme.onSurface,
-                            modifier = Modifier.padding(bottom = 16.dp)
-                        )
-
-                        Text(
-                            text = "Processor", fontSize = 13.sp,
-                            fontWeight = FontWeight.W200,
-                            color = MaterialTheme.colorScheme.onSurface
-                        )
-                        Text(
-                            text = state.value.gameDetails?.minimumSystemRequirements?.processor
-                                ?: "",
-                            fontSize = 14.sp,
-                            fontWeight = FontWeight.W300,
-                            color = MaterialTheme.colorScheme.onSurface,
-                            modifier = Modifier.padding(bottom = 16.dp)
-                        )
-
-                        Text(
-                            text = "Graphics", fontSize = 13.sp,
-                            fontWeight = FontWeight.W200,
-                            color = MaterialTheme.colorScheme.onSurface
-                        )
-                        Text(
-                            text = state.value.gameDetails?.minimumSystemRequirements?.graphics
-                                ?: "",
-                            fontSize = 14.sp,
-                            fontWeight = FontWeight.W300,
-                            color = MaterialTheme.colorScheme.onSurface,
-                            modifier = Modifier.padding(bottom = 16.dp)
                         )
                     }
+                    val screenshots = state.value.gameDetails?.screenshots ?: emptyList()
+                    val height = (76 * screenshots.size).dp
+                    Spacer(Modifier.height(16.dp))
+
+                    LazyVerticalGrid(
+                        columns = GridCells.Fixed(2),
+                        modifier = Modifier.height(height),
+                        horizontalArrangement = Arrangement.spacedBy(8.dp),
+                        verticalArrangement = Arrangement.spacedBy(8.dp)
+                    ) {
+                        items(screenshots.size) { i ->
+                            AsyncImage(
+                                imageUrl = screenshots[i].image,
+                                contentDescription = "Anime",
+                                contentScale = ContentScale.Crop,
+                                loadingPlaceHolder = {
+                                    ShimmerImagePlaceHolder(height = 110.dp)
+                                },
+                                modifier = Modifier.fillMaxWidth()
+                                    .height(110.dp),
+                                errorPlaceHolder = {},
+                                alignment = Alignment.Center,
+                                alpha = DefaultAlpha,
+                                coloFilter = null,
+                                filterQuality = DrawScope.DefaultFilterQuality,
+                            )
+                        }
+                    }
+
+                    Spacer(Modifier.height(24.dp))
+
+                    Column(
+                        verticalArrangement = Arrangement.Center,
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalAlignment = Alignment.CenterHorizontally
+                    ) {
+                        Text(
+                            text = "Minimum system description", fontSize = 17.sp,
+                            fontWeight = FontWeight.SemiBold,
+                            color = MaterialTheme.colorScheme.onSurface,
+                        )
+                        Text(
+                            text = game.platform, fontSize = 16.sp,
+                            fontWeight = FontWeight.W200,
+                            color = MaterialTheme.colorScheme.onSurface,
+                            modifier = Modifier.padding(start = 8.dp)
+                        )
+                    }
+
+
+                    Spacer(Modifier.height(16.dp))
+
+                    Text(
+                        text = "OS", fontSize = 13.sp,
+                        fontWeight = FontWeight.W200,
+                        color = MaterialTheme.colorScheme.onSurface
+                    )
+                    Text(
+                        text = state.value.gameDetails?.minimumSystemRequirements?.os ?: "",
+                        fontSize = 14.sp,
+                        fontWeight = FontWeight.W300,
+                        color = MaterialTheme.colorScheme.onSurface,
+                        modifier = Modifier.padding(bottom = 16.dp)
+                    )
+
+                    Text(
+                        text = "Memory", fontSize = 13.sp,
+                        fontWeight = FontWeight.W200,
+                        color = MaterialTheme.colorScheme.onSurface
+                    )
+                    Text(
+                        text = state.value.gameDetails?.minimumSystemRequirements?.memory ?: "",
+                        fontSize = 14.sp,
+                        fontWeight = FontWeight.W300,
+                        color = MaterialTheme.colorScheme.onSurface,
+                        modifier = Modifier.padding(bottom = 16.dp)
+                    )
+
+                    Text(
+                        text = "Processor", fontSize = 13.sp,
+                        fontWeight = FontWeight.W200,
+                        color = MaterialTheme.colorScheme.onSurface
+                    )
+                    Text(
+                        text = state.value.gameDetails?.minimumSystemRequirements?.processor
+                            ?: "",
+                        fontSize = 14.sp,
+                        fontWeight = FontWeight.W300,
+                        color = MaterialTheme.colorScheme.onSurface,
+                        modifier = Modifier.padding(bottom = 16.dp)
+                    )
+
+                    Text(
+                        text = "Graphics", fontSize = 13.sp,
+                        fontWeight = FontWeight.W200,
+                        color = MaterialTheme.colorScheme.onSurface
+                    )
+                    Text(
+                        text = state.value.gameDetails?.minimumSystemRequirements?.graphics
+                            ?: "",
+                        fontSize = 14.sp,
+                        fontWeight = FontWeight.W300,
+                        color = MaterialTheme.colorScheme.onSurface,
+                        modifier = Modifier.padding(bottom = 16.dp)
+                    )
                 }
+                //}
 
             }
         }
