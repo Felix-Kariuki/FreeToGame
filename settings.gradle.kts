@@ -21,3 +21,4 @@ dependencyResolutionManagement {
 rootProject.name = "FreeToGame"
 include(":androidApp")
 include(":shared")
+include(":wear")
