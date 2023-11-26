@@ -65,6 +65,7 @@ The plans to complete the `Desktop` and `Web` features are underway. You can als
 - [ktor](https://ktor.io/docs/welcome.html) - Ktor is a framework to easily build connected applications – web applications, HTTP services, mobile and browser applications.
 - [Compose Components Resources](https://mvnrepository.com/artifact/org.jetbrains.compose.components/components-resources) - Resources For Compose Multiplatform.
 - [Kotlin](https://kotlinlang.org/docs/getting-started.html) - Kotlin is a modern but already mature programming language designed to make developers happier. It's concise, safe, interoperable with Java and other languages, and provides many ways to reuse code between multiple platforms for productive programming.
+- [Material3](https://developer.android.com/jetpack/androidx/releases/compose-material3) -  Material 3 includes updated theming and components and Material You personalization features like dynamic color, and is designed to be cohesive with the new Android 12 visual style and system UI.
 
 
 
