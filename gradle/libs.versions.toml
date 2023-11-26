@@ -1,0 +1,82 @@
+
+[versions]
+agp = "8.1.4"
+appcompat = "1.6.1"
+core = "1.12.0"
+datastore-preferences = "1.0.0"
+gradle-plugin = "1.5.5"
+kamel-image = "0.7.1"
+kotlin = "1.9.20"
+compose = "1.5.11"
+compose-material3 = "1.1.2"
+compose-compiler = "1.5.4"
+activity-compose = "1.8.1"
+kotlinx-coroutines-core = "1.7.3"
+kotlinx-datetime = "0.4.0"
+mvvm-core = "0.16.1"
+voyager = "1.0.0-rc10"
+ktor = "2.3.6"
+activity-ktx = "1.8.1"
+
+
+koin = "3.4.3"
+koin-compose = "1.0.4"
+
+[libraries]
+androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "activity-compose" }
+compose-ui = { module = "androidx.compose.ui:ui", version.ref = "compose-compiler" }
+compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "compose-compiler" }
+compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "compose-compiler" }
+compose-foundation = { module = "androidx.compose.foundation:foundation", version.ref = "compose-compiler" }
+compose-material3 = { module = "androidx.compose.material3:material3", version.ref = "compose-material3" }
+#material-icons = { group = "androidx.compose.material", name = "material-icons-extended" }
+#compose-runtime = { group = "androidx.compose.runtime", name = "runtime" }
+kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
+
+android-driver = { module = "com.squareup.sqldelight:android-driver", version.ref = "gradle-plugin" }
+appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appcompat" }
+core = { module = "androidx.core:core", version.ref = "core" }
+coroutines-extensions = { module = "com.squareup.sqldelight:coroutines-extensions", version.ref = "gradle-plugin" }
+datastore-preferences = { module = "androidx.datastore:datastore-preferences", version.ref = "datastore-preferences" }
+gradle-plugin = { module = "com.squareup.sqldelight:gradle-plugin", version.ref = "gradle-plugin" }
+jetbrains-compose-runtime = { module = "org.jetbrains.compose.runtime:runtime", version.ref = "compose" }
+jetbrains-compose-foundation = { module = "org.jetbrains.compose.foundation:foundation", version.ref = "compose" }
+jetbrains-compose-material3 = { module = "org.jetbrains.compose.material3:material3", version.ref = "compose" }
+jetbrains-compose-materialIconsExtended = { module = "org.jetbrains.compose.material:material-icons-extended", version.ref = "compose" }
+jetbrains-compose-resources = { module = "org.jetbrains.compose.components:components-resources", version.ref = "compose" }
+
+kamel-image = { module = "media.kamel:kamel-image", version.ref = "kamel-image" }
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinx-coroutines-core" }
+kotlinx-datetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "kotlinx-datetime" }
+mvvm-compose = { module = "dev.icerock.moko:mvvm-compose", version.ref = "mvvm-core" }
+mvvm-core = { module = "dev.icerock.moko:mvvm-core", version.ref = "mvvm-core" }
+mvvm-flow = { module = "dev.icerock.moko:mvvm-flow", version.ref = "mvvm-core" }
+mvvm-flow-compose = { module = "dev.icerock.moko:mvvm-flow-compose", version.ref = "mvvm-core" }
+native-driver = { module = "com.squareup.sqldelight:native-driver", version.ref = "gradle-plugin" }
+runtime = { module = "com.squareup.sqldelight:runtime", version.ref = "gradle-plugin" }
+voyager-koin = { module = "cafe.adriel.voyager:voyager-koin", version.ref = "voyager" }
+voyager-navigator = { module = "cafe.adriel.voyager:voyager-navigator", version.ref = "voyager" }
+voyager-tab-navigator = { module = "cafe.adriel.voyager:voyager-tab-navigator", version.ref = "voyager" }
+voyager-transitions = { module = "cafe.adriel.voyager:voyager-transitions", version.ref = "voyager" }
+activity-ktx = { group = "androidx.activity", name = "activity-ktx", version.ref = "activity-ktx" }
+
+ktor-client-cio = { module = "io.ktor:ktor-client-cio", version.ref = "ktor" }
+ktor-client-android = { module = "io.ktor:ktor-client-android", version.ref = "ktor" }
+ktor-client-content-negotiation = { module = "io.ktor:ktor-client-content-negotiation", version.ref = "ktor" }
+ktor-client-core = { module = "io.ktor:ktor-client-core", version.ref = "ktor" }
+ktor-client-darwin = { module = "io.ktor:ktor-client-darwin", version.ref = "ktor" }
+ktor-client-js = { module = "io.ktor:ktor-client-js", version.ref = "ktor" }
+ktor-client-logging = { module = "io.ktor:ktor-client-logging", version.ref = "ktor" }
+ktor-serialization-kotlinx-json = { module = "io.ktor:ktor-serialization-kotlinx-json", version.ref = "ktor" }
+
+koin-android = { module = "io.insert-koin:koin-android", version.ref = "koin" }
+koin-core = { module = "io.insert-koin:koin-core", version.ref = "koin" }
+koin-compose = { module = "io.insert-koin:koin-compose", version.ref = "koin-compose"}
+
+[plugins]
+androidApplication = { id = "com.android.application", version.ref = "agp" }
+androidLibrary = { id = "com.android.library", version.ref = "agp" }
+kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+kotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+composeMultiplatform = { id = "org.jetbrains.compose", version.ref = "compose" }
+kotlinNativeCocoapods = { id = "org.jetbrains.kotlin.native.cocoapods", version.ref = "kotlin" }
