@@ -1,3 +1,5 @@
+import org.jetbrains.compose.desktop.application.dsl.TargetFormat
+
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.androidLibrary)
@@ -27,9 +29,11 @@ kotlin {
         }
     }
 
-
+    jvm("desktop")
 
     sourceSets {
+        val desktopMain by getting
+
         commonMain.dependencies {
             implementation(libs.kotlinx.coroutines.core)
 
@@ -64,6 +68,14 @@ kotlin {
             // implementation("org.jetbrains.kotlinx:kotlinx-datetime:$dateTimeVersion")
 
 
+        }
+        desktopMain.dependencies {
+            implementation(compose.desktop.currentOs)
+//            implementation(libs.kotlinx.coroutines.swing)
+//            implementation(libs.ktor.client.okhttp)
+        }
+        nativeMain.dependencies {
+            implementation(libs.ktor.client.darwin)
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)
@@ -121,4 +133,16 @@ dependencies {
     commonMainApi(libs.mvvm.flow)
     commonMainApi(libs.mvvm.flow.compose)
 
+}
+
+compose.desktop {
+    application {
+        mainClass = "com.flexcode.freetogame.MainKt"
+
+        nativeDistributions {
+            targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
+            packageName = "com.flexcode.freetogame"
+            packageVersion = "1.0.0"
+        }
+    }
 }
