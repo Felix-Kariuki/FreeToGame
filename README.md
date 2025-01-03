@@ -107,7 +107,7 @@ The `wear` module depends on and uses the `shared` module as a regular Android l
 [LICENSE](https://github.com/Felix-Kariuki/FreeToGame/blob/main/LICENSE)
 
   ```
-     Copyright©️ 2024 Felix Kariuki
+     Copyright©️ 2023 Felix Kariuki
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
