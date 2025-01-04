@@ -10,7 +10,7 @@ The plans to complete the Desktop and Web features are underway. You can also ta
 ## Platforms
 Android | IOS | Wear OS| Desktop | Web |
 :----: | :----: | :----: | :----: | :----:
-✅ | ✅ | ✅ | 
+✅ | ✅ | ✅ | ✅|
 
 
 
